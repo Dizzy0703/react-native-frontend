@@ -10,7 +10,7 @@ import {orderCheckout} from '../../../services/Api';
 
 const Cart = ({navigation, route}) => {
   const order = route.params;
-  const [laoder, setLoader] = useState(false);
+  const [loader, setLoader] = useState(false);
   useEffect(() => {
     // console.log('OOOOOOOOOOOOOO', order);
   }, []);
@@ -183,7 +183,7 @@ const Cart = ({navigation, route}) => {
           alignSelf="center"
           title="Place Order"
           onPress={placeOrder}
-          loading={laoder}
+          loading={loader}
           containerStyle={{
             marginTop: verticalScale(30),
             marginBottom: verticalScale(30),
